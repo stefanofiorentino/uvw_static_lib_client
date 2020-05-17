@@ -3,6 +3,11 @@ project(uvw_static_lib_client)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include(cmake/BuildDefaults.cmake)
+
+fetch_content_libuv()
+fetch_content_uvw()
+
 # in case of uvw built with BUILD_UVW_LIBS=OFF
 add_executable(uvw_header_only_client main.cpp)
 target_link_libraries(uvw_header_only_client uv_a dl pthread)
