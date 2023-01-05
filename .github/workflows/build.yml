@@ -26,7 +26,7 @@ jobs:
         make -j4
     - name: Run tests
       working-directory: build
-      run: ./uvw_static_lib_client
+      run: ./uvw-sample-app
 
   windows:
     timeout-minutes: 60
